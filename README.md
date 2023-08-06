@@ -13,3 +13,4 @@ https://github.com/printfHypna/Task-Manager-App/assets/93797241/16d29fcd-9a01-4b
 - Delete tasks: User can delete tasks from their information window.
 - Set status: User can set set the tasks as "Done" from "Pending" from their information window. After the status changed it can't be reversed and the task can't be editted.
 - Exit: User can close the app with the "Exit" button on the main window.
+- Database: The program uses a database for storing the tasks. 
