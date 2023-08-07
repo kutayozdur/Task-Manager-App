@@ -20,3 +20,9 @@ https://github.com/printfHypna/Task-Manager-App/assets/93797241/16d29fcd-9a01-4b
 - Python 3.x
 - Tkinter library
 - SQLite module
+
+# Installation
+
+- git clone https://github.com/printfHypna/Task-Manager-App.git
+- cd Task-Manager-App
+- python app.py
