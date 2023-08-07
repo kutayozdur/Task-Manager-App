@@ -23,6 +23,6 @@ https://github.com/printfHypna/Task-Manager-App/assets/93797241/16d29fcd-9a01-4b
 
 # Installation
 
-- git clone https://github.com/printfHypna/Task-Manager-App.git
+- /git clone https://github.com/printfHypna/Task-Manager-App.git
 - cd Task-Manager-App
 - python app.py
