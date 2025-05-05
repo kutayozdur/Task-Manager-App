@@ -5,6 +5,7 @@ from database_manager import DatabaseManager
 from datetime import date
 from task import Task
 from tkinter import messagebox
+import os
 
 # Pyinstaller - Spec
 
@@ -114,8 +115,8 @@ class TaskManager(tk.Tk):
 
         # For date label in the info frame
         self.date_text = tk.StringVar()
-
-        db_file = "/Users/kutayozdur/Documents/PythonProjects/task-manager-app/task_database.db"
+ 
+        db_file = os.path.join(os.path.dirname(__file__), "task_database.db")
         self.db_manager = DatabaseManager(db_file)
 
         tasks_frame = Tasks(

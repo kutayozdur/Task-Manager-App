@@ -49,6 +49,7 @@ class Tasks(ttk.Frame):
         buttons_container.columnconfigure((0, 1), weight=1)
         buttons_container.rowconfigure(0, weight=1)
 
+
         self.add_button = ttk.Button(
             buttons_container,
             text="Add",

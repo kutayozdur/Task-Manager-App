@@ -18,7 +18,8 @@ class DatabaseManager:
                     description TEXT NOT NULL,
                     note TEXT,
                     date DATE,
-                    status INTEGER DEFAULT 0 NOT NULL
+                    status INTEGER DEFAULT 0 NOT NULL,
+                    reminder DATETIME
                 )
                 """
             )
@@ -28,10 +29,10 @@ class DatabaseManager:
         with self.connection:
             self.connection.execute(
                 """
-                INSERT INTO tasks (description, note, date)
-                VALUES (?, ?, ?)
+                INSERT INTO tasks (description, note, date, reminder)
+                 VALUES (?, ?, ?, ?)
                 """,
-                (task.desc, task.note, task.due_date),
+                (task.desc, task.note, task.due_date, task.reminder),
             )
 
     # Delete a task from the database based on its ID
@@ -45,15 +46,15 @@ class DatabaseManager:
             )
 
     # Update an existing task with a date value in the database based on its ID
-    def update_task_with_date(self, task_desc, task_note, task_due_date, task_id):
+    def update_task_with_date(self, task_desc, task_note, task_due_date, task_reminder, task_id):
         with self.connection:
             self.connection.execute(
                 """
                 UPDATE tasks
-                SET description=?, note=?, date=?
+                SET description=?, note=?, date=?,reminder=?
                 WHERE id=?
                 """,
-                (task_desc, task_note, task_due_date, task_id),
+                (task_desc, task_note, task_due_date, task_reminder ,task_id),
             )
 
     # Update an existing task without a date value in the database based on its ID

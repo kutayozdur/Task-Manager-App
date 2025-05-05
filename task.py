@@ -1,10 +1,11 @@
 class Task:
-    def __init__(self, desc, note, due_date=None, id=None, status=0):
+    def __init__(self, desc, note, due_date=None, id=None, status=0, reminder=None):
         self.id = id
         self.desc = desc
         self.note = note
         self.due_date = due_date
         self.status = status
+        self.reminder = reminder
 
     def __str__(self):
         return self.desc
